@@ -53,7 +53,7 @@ export default function ExplorePage() {
       "tagzo_result",
       JSON.stringify({ html: item.html, react: item.react, vue: item.vue })
     );
-    window.open("/result", "_blank");
+    window.open(`${BP}/result`, "_blank");
   };
 
   return (
