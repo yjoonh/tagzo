@@ -1,0 +1,26 @@
+services:
+  tagzo:
+    build:
+      context: .
+      args:
+        NEXT_PUBLIC_BASE_PATH: /project/tagzo
+    container_name: tagzo
+    ports:
+      - "3006:3006"
+    environment:
+      - NODE_ENV=production
+      - NEXT_PUBLIC_BASE_PATH=/project/tagzo
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+      - ADMIN_EMAIL=${ADMIN_EMAIL}
+      - ADMIN_PASSWORD=${ADMIN_PASSWORD}
+      - ADMIN_SECRET=${ADMIN_SECRET}
+    restart: unless-stopped
+    networks:
+      - npm_default
+      - tagzo_network
+
+networks:
+  npm_default:
+    external: true
+  tagzo_network:
+    driver: bridge
