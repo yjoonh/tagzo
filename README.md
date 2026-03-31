@@ -89,6 +89,9 @@ tagzo-app/
 | 변수 | 필수 | 설명 |
 |------|------|------|
 | `ANTHROPIC_API_KEY` | ✅ 필수 | Anthropic Claude API 키 |
+| `ADMIN_EMAIL` | 선택 | 어드민 계정 이메일 (설정 시 로그인 후 무제한 사용) |
+| `ADMIN_PASSWORD` | 선택 | 어드민 계정 비밀번호 |
+| `ADMIN_SECRET` | 선택 | 세션 쿠키 서명값 (랜덤 문자열 권장, 예: `openssl rand -hex 32`) |
 
 ## 개발 스크립트
 
